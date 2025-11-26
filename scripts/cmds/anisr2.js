@@ -40,21 +40,21 @@ module.exports = {
     const response = await fetchTikTokVideos(modifiedQuery);
 
     if (!response || !response.videoUrl) {
-      return api.sendMessage(`No video found.`, event.threadID, event.messageID);
+      return api.sendMessage(`Piw Piw Chat Bot No video found.`, event.threadID, event.messageID);
     }
 
     try {
       const videoStream = await axios.get(response.videoUrl, { responseType: "stream" });
       api.sendMessage(
         {
-          body: "𝐇𝐞𝐫𝐞'𝐬 𝐲𝐨𝐮𝐫 𝐚𝐧𝐢𝐦𝐞 𝐞𝐝𝐢𝐭𝐳 𝐯𝐢𝐝𝐞𝐨 😘",
+          body: "𝐏𝐢𝐰 𝐏𝐢𝐰 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭 𝐇𝐞𝐫𝐞'𝐬 𝐲𝐨𝐮𝐫 𝐚𝐧𝐢𝐦𝐞 𝐞𝐝𝐢𝐭𝐳 𝐯𝐢𝐝𝐞𝐨 😘",
           attachment: videoStream.data,
         },
         event.threadID,
         event.messageID
       );
     } catch {
-      api.sendMessage("🥹error, contact MahMUD", event.threadID, event.messageID);
+      api.sendMessage("🥹error, contact Piw Piw Chat Bot", event.threadID, event.messageID);
     }
   },
 };
