@@ -23,7 +23,7 @@ module.exports = {
     }
     
     if (!args.length) {
-      return api.sendMessage("Please provide a question", event.threadID, event.messageID);
+      return api.sendMessage("Piw Piw Chat Bot Please provide a question", event.threadID, event.messageID);
     }
 
     const query = args.join(" ");
@@ -42,9 +42,9 @@ module.exports = {
         return api.sendMessage(response.data.error, event.threadID, event.messageID);
       }
 
-      api.sendMessage(response.data.response || "Sorry, I couldn't generate a response.", event.threadID, event.messageID);
+      api.sendMessage(response.data.response || "Sorry, Piw Piw Chat Bot couldn't generate a response.", event.threadID, event.messageID);
     } catch (error) {
-      api.sendMessage("🥹error, contact MahMUD", event.threadID, event.messageID);
+      api.sendMessage("🥹error, contact Gojo Orupe Piw Piw", event.threadID, event.messageID);
     }
   }
 };
