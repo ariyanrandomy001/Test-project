@@ -31,7 +31,7 @@ module.exports = {
       const apiUrl = await mahmud();
       const res = await axios.get(`${apiUrl}/api/album/videos/cat?userID=${event.senderID}`);
       if (!res.data.success || !res.data.videos.length)
-        return api.sendMessage("❌ | No videos found.", event.threadID, event.messageID);
+        return api.sendMessage("❌ | Piw Piw Chat Bot No videos found.", event.threadID, event.messageID);
 
       const url = res.data.videos[Math.floor(Math.random() * res.data.videos.length)];
       const filePath = path.join(__dirname, "temp_video.mp4");
@@ -48,17 +48,17 @@ module.exports = {
 
       writer.on("finish", () => {
         api.sendMessage({
-          body: "✨ | 𝐇𝐞𝐫𝐞'𝐬 𝐲𝐨𝐮𝐫 𝐂𝐚𝐭 𝐯𝐢𝐝𝐞𝐨",
+          body: "✨ | 𝐏𝐢𝐰 𝐏𝐢𝐰 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭 𝐇𝐞𝐫𝐞'𝐬 𝐲𝐨𝐮𝐫 𝐂𝐚𝐭 𝐯𝐢𝐝𝐞𝐨",
           attachment: fs.createReadStream(filePath)
         }, event.threadID, () => fs.unlinkSync(filePath), event.messageID);
       });
 
       writer.on("error", () => {
-        api.sendMessage("❌ | Download error.", event.threadID, event.messageID);
+        api.sendMessage("❌ | Piw Piw Chat Bot Download error.", event.threadID, event.messageID);
       });
     } catch (e) {
       console.error("ERROR:", e);
-      api.sendMessage("❌ | Failed to fetch or send video.", event.threadID, event.messageID);
+      api.sendMessage("❌ | Piw Piw Chat Bot Failed to fetch or send video.", event.threadID, event.messageID);
     }
   }
 };
