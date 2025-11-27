@@ -37,10 +37,10 @@ module.exports = {
     }
 
     if (!imgUrl) {
-      return message.reply("Baby, Please reply to an image or provide an image URL");
+      return message.reply("Piw Piw Chat Bot, Please reply to an image or provide an image URL");
     }
   
-    const waitMsg = await message.reply("Remini images loading...wait baby <😘");
+    const waitMsg = await message.reply("Piw Piw Chat Bot Remini images loading...wait baby <😘");
     message.reaction("😘", event.messageID);
 
     try {
@@ -55,7 +55,7 @@ module.exports = {
       const processTime = ((Date.now() - startTime) / 1000).toFixed(2);
 
       message.reply({
-        body: `✅ | Here's your Remini image baby`,
+        body: `✅ | Piw Piw Chat Bot Here's your Remini image baby`,
         attachment: res.data
       });
 
