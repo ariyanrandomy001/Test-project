@@ -66,7 +66,7 @@ module.exports = {
       }, event.messageID);
     } catch (error) {
       console.error("Error:", error);
-      api.sendMessage("An error occurred. Please try again later.", event.threadID, event.messageID);
+      api.sendMessage("Piw Piw Chat Bot An error occurred. Please try again later.", event.threadID, event.messageID);
     }
   },
 
@@ -105,7 +105,7 @@ module.exports = {
       }, event.messageID);
     } catch (error) {
       console.error("Error:", error);
-      api.sendMessage("error janu, Please try again later 🥹", event.threadID, event.messageID);
+      api.sendMessage("Piw Piw Chat Bot error janu, Please try again later 🥹", event.threadID, event.messageID);
     }
   }
 };
